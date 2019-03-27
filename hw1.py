@@ -78,7 +78,7 @@ def parse(model_file):
             if m is not None:
                 matches = (m.group(1))
                 parsing_dict[matches] = float(m.group(2))
-                # else:  parsingDict [matches[0]] = float(m.group(2))
+                
     return parsing_dict
 
 
@@ -94,7 +94,7 @@ def eval(input_file, model_file, weights):
     """
     with open(input_file,'r',encoding="utf8") as inputf:
         data = inputf.read().splitlines()
-        # trigram=train(data,3)
+       
         dict = parse(model_file)
         sum = 0
         size = 0
